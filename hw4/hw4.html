@@ -13,9 +13,6 @@ html, body{
 	
 }
 
-
-
-
 @keyframes action {
   from, 25%, 50%, 75%, to {
     animation-timing-function: cubic-bezier(0.3, 0.6, 0.3, 1.000);
@@ -70,16 +67,39 @@ html, body{
 .shake{
 	animation: shake 1s 5;
 }
-
+.shake2{
+	animation: shake 3s 2;
+}
+.purple {
+	background-color: purple;
+}
+@keyframes fade {
+	50% { 
+		opacity: 0
+	}
+}
+.fade{
+	animation: fade 1s 2 ;
+}
+.fade2{
+	animation: fade 1s 2;animation-delay: 2s
+}
+.cyan{
+	background-color: cyan;
+}
 </style>
 </head>
 <body>
-<div class="yellow">
+<div class="cyan">
+<div class="purple fade2">
+<div class="yellow shake2 fade">
 	<div class="shake">
 	<div class="action">
 	<img src="http://www.charbase.com/images/glyph/9786">
 	</div>
 	</div>
+</div>
+</div>
 </div>
 </body>
 </html>

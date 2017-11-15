@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<style type="text/css">
+
+#bg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+
+  min-width: 100%;
+  min-height: 100%;
+}
+</style>
+
+
+
+<img src="" id="bg" alt="">
+
+<script type="text/javascript">	
+
+
+var channels = [ "image.gif", "image1.gif","image2.gif" ];
+
+var index = 0;
+
+
+console.log( channels[index] );
+
+document.getElementById("bg").src = "image.gif";
+
+ document.body.addEventListener('keydown', function(event) {
+	console.log(event);
+	
+	if (event.key == "ArrowDown") {
+		index = index - 1 ;
+	}
+	if (event.key == "ArrowUp") {
+		index = index + 1;
+	}
+	if(index == 3){
+		index = 0
+	}
+
+	if(index == -1){
+		index = 2
+	}
+	document.getElementById("bg").src = channels[index];
+
+	
+});
+
+
+</script>
+</body>
+</html>

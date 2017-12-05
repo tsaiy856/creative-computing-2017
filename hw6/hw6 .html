@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+<script type="text/javascript">
+
+var Bug = "No, no, no. Oh, no. Oh, no. I'm lost! Where's the line? It just went away. What do I do? Help! We'll be stuck here forever! Do not panic. Do not panic! We are trained professionals. 	Now, stay calm. We are going around the leaf. A-Around the leaf? I don't think we can do that. Oh, nonsense. This is nothing compared to the twig of'93. Whimpering  That's it. That's it. Good! You're doing great! There you go. There you go! Watch my eyes. Don't look away."	
+
+var words =  Bug.split(/\s+/);
+
+console.log(words);
+
+
+
+
+var dictionary = {};
+
+for(var 1 = 0; i < words. length-1 ; i = i + 1){
+	var word = words[i];
+	var nextword = words[i+1];
+
+	if(dictionary[word] == undefined){
+		dictionary[word] = [];
+	}
+	dictionary[word].push(nextword); 
+
+
+}
+
+console.log(dictionary);
+
+var startword = words[Math.floor(Math.random()* words.length)];
+
+console.log(startword);
+
+var nextwords = dictionary[startword];
+
+var nextword = nextwords [Math.floor(Math.random()*nextwords.length)]
+
+console.log(nextword);
+
+
+
+var startword = words[Math.floor(Math.random()* words.length)];
+
+var phrase = [startword]
+
+for(var i = 0; i < 20; i++){
+	var word = phrase [i];
+	var nextwords = dictionary[word];
+	var nextword = nextwords[Math.floor(Math.random()*nextwords.length)];
+	phrase.push(nextword)
+}
+
+console.log(phrase);
+
+
+for(var i = 0; i < phrase.length; i++){
+	document.body.innerHTML += phrase[i] + " ";
+}
+
+
+
+
+
+</script>
+</body>
+</html>
